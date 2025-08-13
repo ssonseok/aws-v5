@@ -1,15 +1,15 @@
 server:
-  port: 5000
+  port: ${PORT}
   servlet:
     encoding:
       charset: utf-8
 
 spring:
   datasource:
-    url: jdbc:mariadb://${rds.hostname}:${rds.port}/${rds.db.name}?allowPublicKeyRetrieval=true&useSSL=false
-    driver-class-name: org.mariadb.jdbc.Driver
-    username: ${rds.username}
-    password: ${rds.password}
+    url: jdbc:mariadb://${RDS_HOSTNAME}:${RDS_PORT}/${RDS_DB_NAME}?allowPublicKeyRetrieval=true&useSSL=false
+    username: ${RDS_USERNAME}
+    password: ${RDS_PASSWORD}
+
 
   jpa:
     open-in-view: true
